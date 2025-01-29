@@ -96,6 +96,47 @@
             text-align: center;
         }
 
+        /* Tombol dengan gradiasi */
+            .toggle-button {
+            background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
+            color: #333; /* Warna teks hitam */
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Papan penjelasan */
+        .content-box {
+            background: linear-gradient(to bottom, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
+            color: #333; /* Warna teks hitam */
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
+            margin: 20px auto;
+            max-width: 300px; /* Ukuran papan penjelasan kecil */
+            display: none; /* Disembunyikan secara default */
+            text-align: justify;
+        }
+
+        /* Menghapus bayangan teks dari tombol dan penjelasan tombol */
+        .toggle-button, .content-box {
+            text-shadow: none;
+            color: #333; /* Teks hitam tanpa bayangan */
+        }
+
         .team img {
             border-radius: 50%;
             width: 150px;
@@ -142,47 +183,6 @@
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             }
         }
-
-        .toggle-button {
-            background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
-            color: #333; /* Warna teks hitam */
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 10px auto;
-            display: block;
-        }
-
-        .toggle-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Papan penjelasan */
-        .content-box {
-            background: linear-gradient(to bottom, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
-            color: #333; /* Warna teks hitam */
-            font-size: 16px;
-            line-height: 1.6;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
-            margin: 20px auto;
-            max-width: 300px; /* Ukuran papan penjelasan kecil */
-            display: none; /* Disembunyikan secara default */
-            text-align: justify;
-        }
-
-        /* Menghapus bayangan teks dari tombol dan penjelasan tombol */
-        .toggle-button, .content-box {
-            text-shadow: none;
-            color: #333; /* Teks hitam tanpa bayangan */
-        }
-    }
     </style>
 </head>
 <body>
