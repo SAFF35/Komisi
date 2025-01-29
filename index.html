@@ -82,47 +82,6 @@
             margin: 1px auto;
         }
 
-        /* Tombol dengan gradiasi */
-        .toggle-button {
-            background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
-            color: #333; /* Warna teks hitam */
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 10px auto;
-            display: block;
-        }
-
-        .toggle-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Papan penjelasan */
-        .content-box {
-            background: linear-gradient(to bottom, #FFD700, #FFA500); /* Gradiasi kuning ke orange */
-            color: #333; /* Warna teks hitam */
-            font-size: 16px;
-            line-height: 1.6;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
-            margin: 20px auto;
-            max-width: 300px; /* Ukuran papan penjelasan kecil */
-            display: none; /* Disembunyikan secara default */
-            text-align: justify;
-        }
-
-        /* Menghapus bayangan teks dari tombol dan penjelasan tombol */
-        .toggle-button, .content-box {
-            text-shadow: none;
-            color: #333; /* Teks hitam tanpa bayangan */
-        }
-
         .content {
             max-width: 90%;
             margin: 20px auto;
@@ -135,6 +94,36 @@
         .content h3 {
             color: #FF4500;
             text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .hidden-container {
+            display: none; /* Awalnya tersembunyi */
+        }
+
+        .button {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #0056b3;
         }
 
         .team img {
@@ -244,16 +233,29 @@
     </p>
 </div>
     
-    <div class="content-card">
+    <button class="button" onclick="showMore()">👉 Selengkapnya</button>
+
+    <div class="container hidden-container" id="more-info">
+        <h3>Penjelasan Lengkap tentang Ikan</h3>
+        <p>Ikan adalah vertebrata berdarah dingin yang hidup di air. Ikan bernapas menggunakan insang dan sebagian besar memiliki sirip untuk bergerak.</p>
+        <h4>Macam-macam Ikan:</h4>
+        <ul>
+            <li><b>Ikan Air Tawar</b> - Contoh: Lele, Gurame, Patin</li>
+            <li><b>Ikan Air Laut</b> - Contoh: Tuna, Kakap, Salmon</li>
+            <li><b>Ikan Hias</b> - Contoh: Cupang, Koi, Guppy</li>
+        </ul>
     </div>
-    <button class="toggle-button" onclick="toggleContent('content-box-1')">👉 Selengkapnya</button>
-    <div class="content-box" id="content-box-1">
-        <p>Atomic Habits</p>
-      <p>
-<p>Ingin mengubah hidupmu menjadi lebih baik? Mulailah dari hal-hal kecil. "Atomic Habits" mengajarkanmu bahwa perubahan besar dimulai dari kebiasaan kecil yang dilakukan secara konsisten. Bayangkan hidupmu seperti sebuah taman. Dengan rajin menyiram dan merawat tanaman setiap hari, tamanmu akan tumbuh subur dan indah. Begitu pula dengan kebiasaanmu. Dengan mengubah kebiasaan kecil, kamu akan melihat perubahan besar dalam hidupmu.</p>
-<p>
-      <p>Buku ini akan membantumu membangun kebiasaan positif dan menghilangkan kebiasaan buruk. James Clear, pertama pencetus metode ini, memberikan panduan praktis dan mudah diikuti untuk menerapkan perubahan dalam hidupmu. Mulai dari mengatur lingkungan sekitar, memberikan penghargaan pada diri sendiri, hingga mengatasi hambatan, semua dijelaskan secara rinci. Dengan "Atomic Habits", kamu akan memiliki semua alat yang dibutuhkan untuk mencapai tujuanmu.</p>
-    </div>
+
+    <script>
+        function showMore() {
+            var moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
 
     <div class="content">
         <h3></h3>
