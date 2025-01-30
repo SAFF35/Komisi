@@ -109,17 +109,23 @@
 
         .hidden-container {
             display: none; /* Awalnya tersembunyi */
+            margin-top: 30px; /* Jarak setelah tombol */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Jarak dengan container pertama */
         }
 
         .button {
             background: #007BFF;
             color: #fff;
-            padding: 10px 15px;
+            padding: 12px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 10px;
         }
 
         .button:hover {
@@ -232,8 +238,14 @@
         Dengan sistem yang dirancang untuk mendukung setiap anggotanya, baik <b>Anggota Basic</b> maupun <b>Anggota Premium</b> kami memberikan peluang yang sama kepada mereka untuk sukses di SAF sesuai dengan kebutuhan dan tujuan mereka.
     </p>
 </div>
-    
-    <button class="button" onclick="showMore()">👉 Selengkapnya</button>
+
+    <!-- Tombol di tengah layar -->
+    <div class="button-container">
+        <button class="button" onclick="showMore()">👉 Selengkapnya</button>
+    </div>
+
+    <!-- Jarak satu paragraf kosong -->
+    <p></p>
 
     <div class="container hidden-container" id="more-info">
         <h3>Penjelasan Lengkap tentang Ikan</h3>
@@ -246,7 +258,7 @@
         </ul>
     </div>
 
-    <script>
+<script>
         function showMore() {
             var moreInfo = document.getElementById("more-info");
             if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
